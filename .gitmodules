@@ -1,0 +1,3 @@
+[submodule "gavin/feature-mode"]
+	path = gavin/feature-mode
+	url = git@github.com:hgavin/cucumber.el.git

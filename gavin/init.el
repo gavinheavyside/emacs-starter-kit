@@ -1,4 +1,5 @@
-(setq load-path (cons (expand-file-name "~/.emacs.d/gavin/color-theme-6.6.0") load-path))
+(add-to-list 'load-path "~/.emacs.d/gavin/color-theme-6.6.0")
+(add-to-list 'load-path "~/.emacs.d/gavin/feature-mode")
 
 (require 'cc-mode)
 (require 'ctypes)
@@ -62,12 +63,18 @@
 
 (require 'ctypes)
 
+(autoload 'feature-mode "feature-mode" "Mode for editing cucumber files" t)
+
 ;; Go into proper mode according to file extension
 (setq auto-mode-alist
       (append '(("\\.h$"            . c++-mode)
                 ("\\onscript$"      . python-mode)
                 ("\\onstruct$"      . python-mode)
+                ("\.feature$"       . feature-mode)
                 ) auto-mode-alist))
+
+;;(require 'feature-mode)
+;;(add-to-list 'feature-mode '("\.feature$" . feature-mode))
 
 
 

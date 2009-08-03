@@ -150,3 +150,4 @@
 (if window-system (color-theme-initialize))
 (if window-system (color-theme-subtle-hacker))
 
+(nav)

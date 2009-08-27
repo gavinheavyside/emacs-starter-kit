@@ -1,6 +1,7 @@
 (add-to-list 'load-path "~/.emacs.d/gavin/color-theme-6.6.0")
 (add-to-list 'load-path "~/.emacs.d/gavin/feature-mode")
 (add-to-list 'load-path "~/.emacs.d/gavin/slime")
+(add-to-list 'load-path "~/.emacs.d/gavin/tabbar-1.3")
 
 (require 'cc-mode)
 (require 'ctypes)
@@ -156,3 +157,27 @@
 (slime-setup)
 
 (nav)
+
+(require 'tabbar)
+
+(set-face-attribute
+ 'tabbar-default-face nil
+ :background "gray60")
+(set-face-attribute
+ 'tabbar-unselected-face nil
+ :background "gray85"
+ :foreground "gray30"
+ :box nil)
+(set-face-attribute
+ 'tabbar-selected-face nil
+ :background "#f2f2f6"
+ :foreground "black"
+ :box nil)
+(set-face-attribute
+ 'tabbar-button-face nil
+ :box '(:line-width 1 :color "gray72" :style released-button))
+(set-face-attribute
+ 'tabbar-separator-face nil
+ :height 0.7)
+
+(tabbar-mode 1)

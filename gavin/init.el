@@ -2,9 +2,11 @@
 (add-to-list 'load-path "~/.emacs.d/gavin/feature-mode")
 (add-to-list 'load-path "~/.emacs.d/gavin/slime")
 (add-to-list 'load-path "~/.emacs.d/gavin/tabbar-1.3")
+(add-to-list 'load-path "~/.emacs.d/gavin/pig-mode")
 
 (require 'cc-mode)
 (require 'ctypes)
+(require 'pig-mode)
 
 ;;; c++ - mode
 (add-hook 'c++-mode-hook

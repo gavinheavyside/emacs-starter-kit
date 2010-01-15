@@ -7,6 +7,7 @@
 (require 'cc-mode)
 (require 'ctypes)
 (require 'pig-mode)
+(require 'cmake-mode)
 
 ;;; c++ - mode
 (add-hook 'c++-mode-hook
@@ -75,6 +76,8 @@
                 ("\\onscript$"      . python-mode)
                 ("\\onstruct$"      . python-mode)
                 ("\.feature$"       . feature-mode)
+                ("CMakeLists\\.txt\\'" . cmake-mode)
+                ("\\.cmake\\'" . cmake-mode)
                 ) auto-mode-alist))
 
 ;;(require 'feature-mode)

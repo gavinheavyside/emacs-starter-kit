@@ -1,6 +1,5 @@
 (add-to-list 'load-path "~/.emacs.d/gavin/color-theme-6.6.0")
 (add-to-list 'load-path "~/.emacs.d/gavin/feature-mode")
-(add-to-list 'load-path "~/.emacs.d/gavin/slime")
 (add-to-list 'load-path "~/.emacs.d/gavin/tabbar-1.3")
 (add-to-list 'load-path "~/.emacs.d/gavin/pig-mode")
 
@@ -156,12 +155,6 @@
 (if window-system (require 'color-theme))
 (if window-system (color-theme-initialize))
 (if window-system (color-theme-subtle-hacker))
-
-(setq inferior-lisp-program "/opt/local/bin/sbcl") ; your Lisp system
-(require 'slime)
-(slime-setup)
-
-(nav)
 
 (require 'tabbar)
 

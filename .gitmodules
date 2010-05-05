@@ -1,6 +1,3 @@
 [submodule "gavin/feature-mode"]
 	path = gavin/feature-mode
 	url = git@github.com:hgavin/cucumber.el.git
-[submodule "gavin/slime"]
-	path = gavin/slime
-	url = git://github.com/nablaone/slime.git

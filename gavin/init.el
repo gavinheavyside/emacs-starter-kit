@@ -7,14 +7,23 @@
 (require 'ctypes)
 (require 'pig-mode)
 (require 'cmake-mode)
+(require 'whitespace)
+
+(setq whitespace-style '(trailing lines space-before-tab
+                          indentation space-after-tab)
+      whitespace-line-column 100)
 
 ;;; c++ - mode
 (add-hook 'c++-mode-hook
-  '(lambda ()
-     (require 'font-lock)
-     (setq c++-font-lock-keywords c++-font-lock-keywords-3)
-     (font-lock-mode 1)))
+          '(lambda ()
+             (require 'font-lock)
+             (setq c++-font-lock-keywords c++-font-lock-keywords-3)
+             (font-lock-mode 1)
+             (whitespace-mode 1)))
 
+(add-hook 'clojure-mode-hook
+          '(lambda ()
+             (whitespace-mode 1)))
 
 (defconst my-c-style
   '((c-tab-always-indent        . t)
@@ -179,3 +188,5 @@
  :height 0.7)
 
 (tabbar-mode 1)
+
+

@@ -113,7 +113,7 @@
 
 (global-set-key [(C-down-mouse-3)] 'mouse-buffer-menu)
 
-(global-set-key "%" 'match-paren)
+;; (global-set-key "%" 'match-paren)
 
 ;; minimising is annoying when I do it by accident
 (global-unset-key "\C-z")

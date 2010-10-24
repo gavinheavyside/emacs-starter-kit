@@ -3,6 +3,9 @@
 (add-to-list 'load-path "~/.emacs.d/gavin/tabbar-1.3")
 (add-to-list 'load-path "~/.emacs.d/gavin/pig-mode")
 
+(global-set-key [delete] 'delete-char)
+(global-set-key [kp-delete] 'delete-char)
+
 (require 'cc-mode)
 (require 'ctypes)
 (require 'pig-mode)
@@ -153,6 +156,7 @@
 
 (require 'prog-helpers)
 
+(cua-selection-mode t)
 (pc-selection-mode)
 
 ;;(mac-key-mode 1)
@@ -163,7 +167,7 @@
 
 (if window-system (require 'color-theme))
 (if window-system (color-theme-initialize))
-(if window-system (color-theme-subtle-hacker))
+(if window-system (color-theme-zenburn))
 
 (require 'tabbar)
 

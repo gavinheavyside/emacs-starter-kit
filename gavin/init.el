@@ -1,4 +1,3 @@
-(add-to-list 'load-path "~/.emacs.d/gavin/color-theme-6.6.0")
 (add-to-list 'load-path "~/.emacs.d/gavin/feature-mode")
 (add-to-list 'load-path "~/.emacs.d/gavin/tabbar-1.3")
 (add-to-list 'load-path "~/.emacs.d/gavin/pig-mode")
@@ -165,8 +164,6 @@
 
 (setq frame-title-format "%S: %f")
 
-(if window-system (require 'color-theme))
-(if window-system (color-theme-initialize))
 (if window-system (color-theme-zenburn))
 
 (require 'tabbar)

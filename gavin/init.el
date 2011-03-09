@@ -1,6 +1,7 @@
 (add-to-list 'load-path "~/.emacs.d/gavin/feature-mode")
 (add-to-list 'load-path "~/.emacs.d/gavin/tabbar-1.3")
 (add-to-list 'load-path "~/.emacs.d/gavin/pig-mode")
+(add-to-list 'load-path "~/.emacs.d/gavin/elein")
 
 (global-set-key [delete] 'delete-char)
 (global-set-key [kp-delete] 'delete-char)
@@ -10,7 +11,7 @@
 (require 'pig-mode)
 (require 'cmake-mode)
 (require 'whitespace)
-
+(require 'elein)
 (setq whitespace-style '(trailing lines space-before-tab
                           indentation space-after-tab)
       whitespace-line-column 100)
@@ -156,11 +157,11 @@
 (require 'prog-helpers)
 
 (cua-selection-mode t)
-(pc-selection-mode)
+(if (fboundp 'pc-selection-mode)
+    (pc-selection-mode)
+  (require 'pc-select))
 
-;;(mac-key-mode 1)
-;;(mac-option-modifier t)
-;;(setq mac-option-modifier 'meta)
+(setq mac-command-modifier 'meta)
 
 (setq frame-title-format "%S: %f")
 
@@ -190,4 +191,18 @@
 
 (tabbar-mode 1)
 
+(define-globalized-minor-mode global-highlight-parentheses-mode
+  highlight-parentheses-mode
+  (lambda ()
+    (highlight-parentheses-mode t)))
+(global-highlight-parentheses-mode t)
 
+(eval-after-load 'clojure-mode
+  '(define-clojure-indent
+     (describe 'defun)
+     (testing 'defun)
+     (given 'defun)
+     (using 'defun)
+     (with 'defun)
+     (it 'defun)
+     (do-it 'defun)))

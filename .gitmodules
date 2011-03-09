@@ -1,3 +1,6 @@
 [submodule "gavin/feature-mode"]
 	path = gavin/feature-mode
 	url = git@github.com:hgavin/cucumber.el.git
+[submodule "gavin/elein"]
+	path = gavin/elein
+	url = http://github.com/remvee/elein.git

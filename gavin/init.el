@@ -162,6 +162,8 @@
   (require 'pc-select))
 
 (setq mac-command-modifier 'meta)
+(global-unset-key (kbd "M-3"))
+(global-set-key (kbd "M-3") '(lambda() (interactive) (insert-string "#")))
 
 (setq frame-title-format "%S: %f")
 

@@ -208,3 +208,10 @@
      (with 'defun)
      (it 'defun)
      (do-it 'defun)))
+
+;;(setq slime-lisp-implementations
+;;      '((sbcl ("sbcl"))))
+
+(load (expand-file-name "~/quicklisp/slime-helper.el"))
+;; Replace "sbcl" with the path to your implementation
+(setq inferior-lisp-program "sbcl")

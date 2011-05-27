@@ -167,7 +167,8 @@
 
 (setq frame-title-format "%S: %f")
 
-(if window-system (color-theme-zenburn))
+(if window-system (load "color-theme-solarized.el"))
+(if window-system (color-theme-solarized-dark))
 
 (require 'tabbar)
 
@@ -209,9 +210,8 @@
      (it 'defun)
      (do-it 'defun)))
 
-;;(setq slime-lisp-implementations
-;;      '((sbcl ("sbcl"))))
-
-(load (expand-file-name "~/quicklisp/slime-helper.el"))
+;;(load (expand-file-name "~/quicklisp/slime-helper.el"))
 ;; Replace "sbcl" with the path to your implementation
-(setq inferior-lisp-program "sbcl")
+;;(setq inferior-lisp-program "sbcl")
+
+(add-to-list 'package-archives '("marmalade" . "http://marmalade-repo.org/packages/"))
